@@ -35,17 +35,15 @@ ul > li > a:hover {
   min-height: 90vh;
   padding: 1rem;
 }
-center{
+center {
   color: red;
   font-weight: 600;
 }
-.section{
-  /* display: flex;
-  flex-direction:column; */
+input {
+  padding: 0.25rem 0.5rem;
 }
-input{
-  padding: 0.25rem;
-  width: 350px;
+.text {
+  width: 300px;
 }
 footer {
   background-color: #3e5172;
