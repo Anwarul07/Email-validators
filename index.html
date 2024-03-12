@@ -27,26 +27,29 @@
         <center>
             <p>E- mail validators</p>
         </center>
-        <form action="https://getbootstrap.com/">
-            <div>
-                <label for="name">User Name :</label>
-                <input id="name" class="text" type="text" placeholder="Pls Type Your Name">
-            </div>
-
-
-            <div>
-                <label for="Pass"> Password :</label>
-                <input id="Pass" class="text" type="text" placeholder="Pls Type Your Password">
-            </div>
-
-            Select your Gender :
-            <label for="male"> Male</label>
-            <input type="radio" id="male" value="male" name="gender">
-            <label for="Fmale"> Female</label>
-            <input type="radio" id="Fmale" value="Fmale" name="gender">
-
-            <button type="submit">Submit</button>
-        </form>
+        
+        <form action="/submit" method="post">
+            <!-- Text input for username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+        
+            <!-- Password input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+        
+            <!-- Radio buttons for gender -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+        
+            <!-- Submit button -->
+            <input type="submit" value="Submit">
+          </form>
     </main>
 
     <footer>
