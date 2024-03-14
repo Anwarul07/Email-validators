@@ -30,11 +30,19 @@ ul > li > a {
 ul > li > a:hover {
   color: rgb(232, 114, 161);
 }
-
-.container {
+main{
   min-height: 90vh;
-  padding: 1rem;
+
 }
+.container {
+  max-width: 80vw;
+  padding: 2rem;
+  margin: auto;
+}
+#resultcount div::first-letter{
+  text-transform: uppercase;
+}
+
 center {
   color: red;
   font-weight: 600;
