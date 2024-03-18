@@ -21,20 +21,28 @@ let result = {
 
 
 
-submit.addEventListener("click", () => {
+submit.addEventListener("click",  async(e) => {
+    e.preventDefault()
     console.log("cliked");
+
+resultcount.innerHTML = `<img src="loading.svg.svg" alt="loading svg" width="50px">`
+
     
 let key = "ema_live_OizWoZ5bA6huT3ehXSdEwBVw8TzIyeZICBN6qtg0";
-let email=document.getElementById("username").ariaValue;
+let email=document.getElementById("username").value;
 
 let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
 
+let res= await fetch(url);
+let result= await res.json()
+
 let str = '';
 for (key of Object.keys(result)) {
+    if(result[key] !=="" && result[key] !== " "){
     str = str + `<div> ${key} : ${result[key]}</div>`
-}
+}}
 console.log(str);
-resultcount.innerHTML = str
+resultcount.innerHTML=str;
 })
 
 
